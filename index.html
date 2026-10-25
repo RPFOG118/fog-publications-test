@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FOG Publication PDF Test</title>
+<style>
+.fog-premium-pubs,.fog-premium-pubs *{box-sizing:border-box;}
+.fog-premium-pubs{width:100%;margin:0;padding:8px 4px;background:#ffffff;font-family:Georgia,"Times New Roman",serif;}
+.fog-premium-card{position:relative;isolation:isolate;overflow:hidden;width:100%;margin:0;padding:9px 24px 9px 28px;background:radial-gradient(ellipse at 98% 92%,rgba(192,211,174,0.07) 0%,transparent 42%),linear-gradient(110deg,#fffefa 0%,#fffdf8 55%,#fafaf5 100%);border:1px solid #dce4d6;border-left:9px solid #B79A60;border-radius:13px;box-shadow:none;}
+.fog-premium-card+.fog-premium-card{margin-top:10px;}
+.fog-premium-card::before{content:"";position:absolute;z-index:1;top:0;bottom:0;left:0;width:4px;background:#E5D5AA;}
+.fog-premium-card::after{content:"";position:absolute;z-index:0;right:-70px;bottom:-85px;width:370px;height:180px;border-radius:70% 30% 0 0;background:linear-gradient(140deg,rgba(185,222,162,0.01),rgba(162,207,140,0.045));transform:rotate(-12deg);pointer-events:none;}
+.fog-premium-citation{position:relative;z-index:2;margin:0;padding:0;color:#24342e;font-size:14px;font-weight:400;line-height:1.65;letter-spacing:0;}
+.fog-premium-citation strong{color:#075c3e;font-weight:700;}
+.fog-premium-citation em{color:#175c45;font-style:italic;}
+.fog-premium-pdf{display:inline-block;vertical-align:middle;white-space:nowrap;margin-left:9px;padding:4px 14px;background:linear-gradient(135deg,#35a070 0%,#187b52 100%);color:#ffffff!important;border:1px solid #16734d;border-radius:7px;font-family:Arial,sans-serif;font-size:12px;font-weight:700;line-height:1.5;text-decoration:none!important;box-shadow:0 2px 6px rgba(21,87,56,0.15);transition:background .2s ease,box-shadow .2s ease;}
+.fog-premium-pdf:hover{background:#106543;color:#ffffff!important;box-shadow:0 3px 9px rgba(21,87,56,0.22);}
+.fog-premium-pdf:focus-visible{outline:2px solid #075c3e;outline-offset:3px;}
+@media(max-width:600px){.fog-premium-pubs{padding:6px 2px;}.fog-premium-card{padding:9px 14px 9px 19px;border-left-width:7px;border-radius:10px;}.fog-premium-citation{font-size:12px;line-height:1.6;}.fog-premium-pdf{font-size:11px;padding:3px 10px;margin-left:5px;}.fog-premium-card::after{width:200px;height:120px;right:-50px;bottom:-65px;}}
+@media(prefers-reduced-motion:reduce){.fog-premium-pdf{transition:none;}}
+</style>
+</head>
+<body style="margin:0;background:#fff">
+<section class="fog-premium-pubs">
+<article class="fog-premium-card">
+<p class="fog-premium-citation">Rajput, K. S., Koyani, R. D., Patel, H. R., Vasava, A. M., Patel, R. S., Patel, A. D., &amp; Singh, A. P. (2015). <strong>A preliminary checklist of fungi of Gujarat State, India.</strong> <em>Current Research in Environmental &amp; Applied Mycology</em>, 5(4):285–306. <a class="fog-premium-pdf" href="https://creamjournal.org/pdf/Cream_5_4_1.pdf">PDF ↗</a></p>
+</article>
+</section>
+</body>
+</html>
