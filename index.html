@@ -1,10 +1,572 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FOG Publication PDF Test</title>
+<title>Fungal Diversity Publications | Fungi of Gujarat</title>
+<meta name="description" content="Fungi of Gujarat — featured publication and fungal diversity research publications.">
+</head>
+<body>
+<!-- WHITE BACKGROUND FOR THE EMBEDDED DOCUMENT AND ALL GAPS -->
 <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff !important;
+  }
+  #fog-o1-publication { margin-bottom: 0; }
+  #fog-publications-list {
+    background: #ffffff !important;
+  }
+</style>
+
+<!-- FOG PUBLICATIONS — MERGED LOCKED DESIGNS -->
+<!-- Featured banner: original emerald/gold design -->
+<!-- Publication cards: original V4.1 compact design -->
+<!-- Only changes: 25px visual separation and scroll button targeting the list -->
+
+
+<!-- ==========================================
+ FUNGI OF GUJARAT
+ FEATURED PUBLICATION
+ OPTION 1 — ROYAL EMERALD & CHAMPAGNE GOLD
+ TEST VERSION ONLY
+ ========================================== -->
+
+<div class="fog-o1-publication" id="fog-o1-publication">
+
+  <div class="fog-o1-inner">
+
+    <!-- LEFT: PUBLICATION INFORMATION -->
+    <div class="fog-o1-content">
+
+      <div class="fog-o1-eyebrow">
+        <span class="fog-o1-star" aria-hidden="true">✦</span>
+        <span>FEATURED PUBLICATION</span>
+        <span class="fog-o1-rule"></span>
+      </div>
+
+      <h2 class="fog-o1-title">
+        First Preliminary Checklist of Fungi from Gujarat
+      </h2>
+
+      <p class="fog-o1-authors">
+        Rajput et al., 2015
+      </p>
+
+      <p class="fog-o1-description">
+        This study provides a preliminary checklist of fungi documenting
+        334 species based on available literature, supplemented with
+        original observations and compiled data.
+      </p>
+
+      <div class="fog-o1-actions">
+
+        <button
+          class="fog-o1-button"
+          type="button"
+          onclick="fogO1Scroll(this)"
+        >
+          <span>View Publications Below</span>
+          <span class="fog-o1-arrow" aria-hidden="true">↓</span>
+        </button>
+
+        <span class="fog-o1-divider" aria-hidden="true"></span>
+
+        <p class="fog-o1-highlight">
+          <span class="fog-o1-book" aria-hidden="true">▤</span>
+          <span>150+ Fungal Species Reported by Our Team</span>
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT: ORIGINAL PUBLICATION COLLAGE -->
+    <div class="fog-o1-image-frame">
+      <div class="fog-o1-image">
+        <img
+          src="https://img1.wsimg.com/isteam/ip/2951aae8-0bd3-4632-a1cf-5ebe56982356/New%20Publication.png/:/rs=w:1160,h:653"
+          alt="First preliminary checklist of fungi from Gujarat, featuring original fungal photographs and publication cover"
+          loading="eager"
+          decoding="async"
+        >
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<style>
+/* ==========================================
+   OPTION 1 — ISOLATED STYLES
+   ROYAL EMERALD & CHAMPAGNE GOLD
+   ========================================== */
+
+.fog-o1-publication,
+.fog-o1-publication * {
+  box-sizing: border-box;
+}
+
+.fog-o1-publication {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  margin: 0;
+  padding: 15px 32px;
+  overflow: hidden;
+
+  border-radius: 20px;
+  border: 1px solid rgba(230, 196, 120, 0.65);
+
+  background:
+    radial-gradient(
+      ellipse at 85% 5%,
+      rgba(244, 204, 117, 0.19),
+      transparent 43%
+    ),
+    radial-gradient(
+      ellipse at 17% 105%,
+      rgba(27, 131, 92, 0.37),
+      transparent 55%
+    ),
+    linear-gradient(
+      115deg,
+      #041e1a 0%,
+      #064435 48%,
+      #12634a 76%,
+      #08291f 100%
+    );
+
+  color: #fff5dc;
+  font-family: Georgia, "Times New Roman", serif;
+
+  box-shadow:
+    0 5px 12px rgba(0, 31, 24, 0.09),
+    inset 0 1px 0 rgba(255, 239, 190, 0.2);
+}
+
+/* TOP GOLD REFLECTION */
+.fog-o1-publication::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      125deg,
+      transparent 34%,
+      rgba(255, 229, 160, 0.055) 56%,
+      transparent 78%
+    );
+}
+
+/* BOTTOM AMBIENT GLOW */
+.fog-o1-publication::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 60%;
+  height: 65%;
+  bottom: -52%;
+  left: 15%;
+  border-radius: 50%;
+  background: rgba(32, 170, 118, 0.13);
+  filter: blur(45px);
+  pointer-events: none;
+}
+
+/* MAIN LAYOUT */
+.fog-o1-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  width: 100%;
+  min-width: 0;
+}
+
+/* LEFT */
+.fog-o1-content {
+  flex: 1 1 0;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* FEATURED LABEL */
+.fog-o1-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+
+  color: #f0cc81;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.6px;
+}
+
+.fog-o1-star {
+  color: #ffdc89;
+  font-size: 23px;
+  line-height: 1;
+  text-shadow: 0 0 13px rgba(245, 199, 98, 0.45);
+}
+
+.fog-o1-rule {
+  width: 115px;
+  max-width: 17%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(247, 208, 129, 0.85),
+    transparent
+  );
+}
+
+/* TITLE */
+.fog-o1-title {
+  margin: 0 0 9px;
+  color: #fff1cf;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(23px, 2.3vw, 33px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  overflow-wrap: break-word;
+}
+
+/* AUTHORS */
+.fog-o1-authors {
+  margin: 0 0 14px;
+  color: #f1d69d;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+/* DESCRIPTION */
+.fog-o1-description {
+  margin: 0 0 22px;
+  max-width: 770px;
+
+  color: #f7f5eb;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* ACTION ROW */
+.fog-o1-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* CHAMPAGNE GOLD BUTTON */
+.fog-o1-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  min-height: 46px;
+  padding: 9px 11px 9px 21px;
+
+  border: 1px solid rgba(255, 242, 193, 0.85);
+  border-radius: 100px;
+
+  background: linear-gradient(
+    135deg,
+    #fff0b5 0%,
+    #f0cc78 42%,
+    #c9943e 100%
+  );
+
+  color: #30230e;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 19px rgba(0, 0, 0, 0.23),
+    0 0 18px rgba(240, 198, 107, 0.1),
+    inset 0 1px 0 rgba(255, 255, 238, 0.65);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
+}
+
+.fog-o1-button:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.07);
+
+  box-shadow:
+    0 10px 26px rgba(0, 0, 0, 0.3),
+    0 0 25px rgba(239, 193, 97, 0.26);
+}
+
+.fog-o1-button:focus-visible {
+  outline: 2px solid #fff3bc;
+  outline-offset: 4px;
+}
+
+.fog-o1-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background: #84601f;
+  color: #fff1c5;
+
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* DIVIDER */
+.fog-o1-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(239, 202, 124, 0.5);
+}
+
+/* TEAM HIGHLIGHT */
+.fog-o1-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+
+  color: #f5d68e;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.fog-o1-book {
+  font-size: 24px;
+  line-height: 1;
+  color: #f7d889;
+}
+
+/* IMAGE FRAME */
+.fog-o1-image-frame {
+  position: relative;
+  flex: 0 0 35%;
+  min-width: 0;
+  padding: 5px;
+
+  border-radius: 19px;
+  border: 1px solid rgba(255, 227, 155, 0.65);
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 235, 175, 0.27),
+    rgba(226, 174, 71, 0.07) 50%,
+    rgba(255, 230, 167, 0.22)
+  );
+
+  box-shadow:
+    0 0 0 3px rgba(237, 197, 110, 0.045),
+    0 12px 32px rgba(0, 0, 0, 0.3),
+    0 0 32px rgba(231, 187, 88, 0.12),
+    inset 0 1px 0 rgba(255, 248, 213, 0.3);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.fog-o1-image-frame:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 17px 38px rgba(0, 0, 0, 0.35),
+    0 0 35px rgba(233, 190, 99, 0.2);
+}
+
+/* IMAGE */
+.fog-o1-image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 13px;
+}
+
+.fog-o1-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1160 / 653;
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.fog-o1-image-frame:hover img {
+  transform: scale(1.025);
+}
+
+/* TABLET */
+@media (max-width: 1050px) {
+  .fog-o1-publication {
+    padding: 15px 25px;
+  }
+
+  .fog-o1-inner {
+    gap: 23px;
+  }
+
+  .fog-o1-image-frame {
+    flex-basis: 34%;
+  }
+
+  .fog-o1-title {
+    font-size: 25px;
+  }
+
+  .fog-o1-description {
+    font-size: 15px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .fog-o1-publication {
+    padding: 16px 18px;
+    border-radius: 17px;
+  }
+
+  .fog-o1-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 23px;
+  }
+
+  .fog-o1-content {
+    width: 100%;
+    text-align: left;
+  }
+
+  .fog-o1-eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.8px;
+  }
+
+  .fog-o1-rule {
+    flex: 1;
+    max-width: 90px;
+  }
+
+  .fog-o1-title {
+    font-size: clamp(23px, 5.4vw, 28px);
+    line-height: 1.25;
+  }
+
+  .fog-o1-authors {
+    font-size: 16px;
+  }
+
+  .fog-o1-description {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 19px;
+  }
+
+  .fog-o1-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+  }
+
+  .fog-o1-divider {
+    display: none;
+  }
+
+  .fog-o1-highlight {
+    font-size: 13px;
+  }
+
+  .fog-o1-image-frame {
+    width: 100%;
+    flex: none;
+    border-radius: 15px;
+  }
+
+  .fog-o1-image {
+    border-radius: 11px;
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width: 380px) {
+  .fog-o1-publication {
+    padding: 14px 14px;
+  }
+
+  .fog-o1-title {
+    font-size: 22px;
+  }
+
+  .fog-o1-button {
+    font-size: 13px;
+  }
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  .fog-o1-button,
+  .fog-o1-image-frame,
+  .fog-o1-image img {
+    transition: none;
+  }
+
+  .fog-o1-button:hover,
+  .fog-o1-image-frame:hover {
+    transform: none;
+  }
+
+  .fog-o1-image-frame:hover img {
+    transform: none;
+  }
+}
+</style>
+
+<script>
+/* ==========================================
+   OPTION 1 — PUBLICATION SCROLL
+   ========================================== */
+
+function fogO1Scroll(button) {
+  const list = document.getElementById("fog-publications-list");
+  if (!list) return;
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  list.scrollIntoView({
+    behavior: reducedMotion ? "auto" : "smooth",
+    block: "start"
+  });
+}
+</script>
+
+<!-- FUNGI OF GUJARAT — 14 PUBLICATIONS — LOCKED V4.1 COMPACT -->
+<style>
+/* FUNGI OF GUJARAT — LOCKED VERSION 4.1, COMPACT SIZE ONLY */
 .fog-premium-pubs,.fog-premium-pubs *{box-sizing:border-box;}
 .fog-premium-pubs{width:100%;margin:0;padding:8px 4px;background:#ffffff;font-family:Georgia,"Times New Roman",serif;}
 .fog-premium-card{position:relative;isolation:isolate;overflow:hidden;width:100%;margin:0;padding:9px 24px 9px 28px;background:radial-gradient(ellipse at 98% 92%,rgba(192,211,174,0.07) 0%,transparent 42%),linear-gradient(110deg,#fffefa 0%,#fffdf8 55%,#fafaf5 100%);border:1px solid #dce4d6;border-left:9px solid #B79A60;border-radius:13px;box-shadow:none;}
@@ -19,13 +581,136 @@
 .fog-premium-pdf:focus-visible{outline:2px solid #075c3e;outline-offset:3px;}
 @media(max-width:600px){.fog-premium-pubs{padding:6px 2px;}.fog-premium-card{padding:9px 14px 9px 19px;border-left-width:7px;border-radius:10px;}.fog-premium-citation{font-size:12px;line-height:1.6;}.fog-premium-pdf{font-size:11px;padding:3px 10px;margin-left:5px;}.fog-premium-card::after{width:200px;height:120px;right:-50px;bottom:-65px;}}
 @media(prefers-reduced-motion:reduce){.fog-premium-pdf{transition:none;}}
+
 </style>
-</head>
-<body style="margin:0;background:#fff">
-<section class="fog-premium-pubs">
-<article class="fog-premium-card">
-<p class="fog-premium-citation">Rajput, K. S., Koyani, R. D., Patel, H. R., Vasava, A. M., Patel, R. S., Patel, A. D., &amp; Singh, A. P. (2015). <strong>A preliminary checklist of fungi of Gujarat State, India.</strong> <em>Current Research in Environmental &amp; Applied Mycology</em>, 5(4):285–306. <a class="fog-premium-pdf" href="https://creamjournal.org/pdf/Cream_5_4_1.pdf">PDF ↗</a></p>
-</article>
-</section>
+<div class="fog-premium-pubs" id="fog-publications-list" style="margin-top:17px;">
+  <!-- PUBLICATION 1 -->
+  <article class="fog-premium-card">
+    <p class="fog-premium-citation">
+      Rajput, K. S., Koyani, R. D., Patel, H. R., Vasava, A. M., Patel, R. S., Patel, A. D., &amp; Singh, A. P. (2015).
+      <strong>A preliminary checklist of fungi of Gujarat State, India.</strong>
+      <em>Current Research in Environmental &amp; Applied Mycology</em>, 5(4):285–306.
+      <a class="fog-premium-pdf" href="https://creamjournal.org/pdf/Cream_5_4_1.pdf" target="_blank" rel="noopener" aria-label="Open publication 1">PDF ↗</a>
+    </p>
+  </article>
+  <!-- PUBLICATION 2 -->
+  <article class="fog-premium-card">
+    <p class="fog-premium-citation">
+      Vasava, A. M., Koyani, R. D., Singh, A. P., &amp; Rajput, K. S. (2015).
+      <strong>Diversity and distribution of myxomycetes in western part of India, with special reference to the state of Gujarat.</strong>
+      <em>Current Research in Environmental &amp; Applied Mycology</em>, 5(4):382–389.
+      <a class="fog-premium-pdf" href="https://img1.wsimg.com/blobby/go/2951aae8-0bd3-4632-a1cf-5ebe56982356/downloads/c7de2466-6255-4547-adeb-338ab8546acf/Diversity%20and%20distribution%20of%20myxomycetes.pdf?ver=1792875218610" target="_blank" rel="noopener" aria-label="Open publication 2">PDF ↗</a>
+    </p>
+  </article>
+  <!-- PUBLICATION 3 -->
+  <article class="fog-premium-card">
+    <p class="fog-premium-citation">
+      Koyani, R. D., Patel, H. R., Vasava, A. M., &amp; Rajput, K. S. (2016).
+      <strong>Xylariaceae: Overview and addition to fungal diversity of Gujarat state.</strong>
+      <em>Studies in Fungi</em>, 1(1):69–79.
+      <a class="fog-premium-pdf" href="https://img1.wsimg.com/blobby/go/2951aae8-0bd3-4632-a1cf-5ebe56982356/downloads/8625ef0d-f0a7-4c62-99e1-1e2816761d64/Xylariaceae-%20Overview%20and%20addition%20to%20fungal%20d.pdf?ver=1792875218610" target="_blank" rel="noopener" aria-label="Open publication 3">PDF ↗</a>
+    </p>
+  </article>
+  <!-- PUBLICATION 4 -->
+  <article class="fog-premium-card">
+    <p class="fog-premium-citation">
+      Vasava, A. M., Koyani, R. D., Patel, R. S., &amp; Rajput, K. S. (2017).
+      <strong>Diversity and distribution of Agaricaceae in western part of India with special reference to Gujarat state.</strong>
+      <em>The Journal of Indian Botanical Society</em>, 96(1&amp;2):119–135.
+      <a class="fog-premium-pdf" href="https://indianbotsoc.org/assets/upload/uploaded/18-MS-733.pdf" target="_blank" rel="noopener" aria-label="Open publication 4">PDF ↗</a>
+    </p>
+  </article>
+  <!-- PUBLICATION 5 -->
+  <article class="fog-premium-card">
+    <p class="fog-premium-citation">
+      Patel, R. S., Vasava, A. M., &amp; Rajput, K. S. (2018).
+      <strong>Morphological and molecular evidence for the occurrence of <em>Itajahya galericulata</em> (Basidiomycota, Phallales) in India.</strong>
+      <em>Plant and Fungal Systematics</em>, 63:39–44.
+      <a class="fog-premium-pdf" href="https://img1.wsimg.com/blobby/go/2951aae8-0bd3-4632-a1cf-5ebe56982356/downloads/68f27b53-217b-4871-9679-98ba32be5824/Morphological%20and%20molecular%20evidence%20Itajahya%20.pdf?ver=1792875218610" target="_blank" rel="noopener" aria-label="Open publication 5">PDF ↗</a>
+    </p>
+  </article>
+  <!-- PUBLICATION 6 -->
+  <article class="fog-premium-card">
+    <p class="fog-premium-citation">
+      Patel, R. S., Vasava, A. M., &amp; Rajput, K. S. (2018).
+      <strong>New distribution record of <em>Cyathus stercoreus</em> (Schwein.) De Toni (Nidulariaceae) for India from Gujarat state.</strong>
+      <em>Studies in Fungi</em>, 3(1):227–233.
+      <a class="fog-premium-pdf" href="https://img1.wsimg.com/blobby/go/2951aae8-0bd3-4632-a1cf-5ebe56982356/downloads/203ff5d2-d5fc-4b59-9601-5f7c08d72fdc/New%20distribution%20record%20of%20Cyathus%20stercoreus.pdf?ver=1792875218610" target="_blank" rel="noopener" aria-label="Open publication 6">PDF ↗</a>
+    </p>
+  </article>
+  <!-- PUBLICATION 7 -->
+  <article class="fog-premium-card">
+    <p class="fog-premium-citation">
+      Patel, R. S., Vasava, A. M., &amp; Rajput, K. S. (2018).
+      <strong>New distribution record of <em>Clathrus delicatus</em> Berk. &amp; Broome (Phallaceae) from Gujarat.</strong>
+      <em>The Journal of Indian Botanical Society</em>, 97(1&amp;2):54–57.
+      <a class="fog-premium-pdf" href="https://img1.wsimg.com/blobby/go/2951aae8-0bd3-4632-a1cf-5ebe56982356/downloads/fc7f2c94-e016-4a36-bae6-42eb57817db7/NEW%20DISTRIBUTION%20RECORD%20OF%20CLATHRUS%20DELICATUS.pdf?ver=1792875218610" target="_blank" rel="noopener" aria-label="Open publication 7">PDF ↗</a>
+    </p>
+  </article>
+  <!-- PUBLICATION 8 -->
+  <article class="fog-premium-card">
+    <p class="fog-premium-citation">
+      Vasava, A. M., Patel, R. S., Koyani, R. D., &amp; Rajput, K. S. (2018).
+      <strong>Distribution and diversity of Polyporaceae in Western India: An overview and addition to mycoflora of the Gujarat state.</strong>
+      <em>Plant Science Today</em>, 5(1):32–38.
+      <a class="fog-premium-pdf" href="https://img1.wsimg.com/blobby/go/2951aae8-0bd3-4632-a1cf-5ebe56982356/downloads/f3da0ad4-720a-49be-b608-973feea6481b/Distribution%20and%20diversity%20of%20Polyporaceae.pdf?ver=1792875218610" target="_blank" rel="noopener" aria-label="Open publication 8">PDF ↗</a>
+    </p>
+  </article>
+  <!-- PUBLICATION 9 -->
+  <article class="fog-premium-card">
+    <p class="fog-premium-citation">
+      Patel, R. S., Vasava, A. M., &amp; Rajput, K. S. (2019).
+      <strong>Distribution of <em>Trichaleurina javanica</em> (Rehm) M. Carbone, Agnello &amp; P. Alvarado (Chorioactidaceae) in India.</strong>
+      <em>Plant Biosystems-An International Journal Dealing with all Aspects of Plant Biology</em>, 153(2):231–234.
+      <a class="fog-premium-pdf" href="https://www.tandfonline.com/doi/full/10.1080/11263504.2018.1461704" target="_blank" rel="noopener" aria-label="Open publication 9">PDF ↗</a>
+    </p>
+  </article>
+  <!-- PUBLICATION 10 -->
+  <article class="fog-premium-card">
+    <p class="fog-premium-citation">
+      Patel, R. S., Vasava, A. M., &amp; Rajput, K. S. (2020).
+      <strong>Studies on morphological and molecular identification of <em>Geastrum</em> from Gujarat, India.</strong>
+      <em>KAVAKA</em>, 54:50–54.
+      <a class="fog-premium-pdf" href="https://www.fungiindia.co.in/images/kavaka/54/8%20Kavaka%2054.pdf" target="_blank" rel="noopener" aria-label="Open publication 10">PDF ↗</a>
+    </p>
+  </article>
+  <!-- PUBLICATION 11 -->
+  <article class="fog-premium-card">
+    <p class="fog-premium-citation">
+      Patel, R. S., Vanzara, A. G., Patel, N. R., Vasava, A. M., Patil, S. M., &amp; Rajput, K. S. (2021).
+      <strong>In-silico discovery of fungal metabolites bergenin, quercitrin and dihydroartemisinin as potential inhibitors against main protease of SARS-CoV-2.</strong>
+      <em>Coronaviruses</em>, 2(8):15–27.
+      <a class="fog-premium-pdf" href="https://www.eurekaselect.com/article/112655" target="_blank" rel="noopener" aria-label="Open publication 11">PDF ↗</a>
+    </p>
+  </article>
+  <!-- PUBLICATION 12 -->
+  <article class="fog-premium-card">
+    <p class="fog-premium-citation">
+      Vasava, A. M., Patel, R. S., &amp; Rajput, K. S. (2021).
+      <strong><em>Sphaerobolus jaysukhianus</em> sp. nov.: an artillery fungus (Geastraceae, Basidiomycota) from India.</strong>
+      <em>Plant Biosystems-An International Journal Dealing with all Aspects of Plant Biology</em>, 155(5):963–970.
+      <a class="fog-premium-pdf" href="https://www.tandfonline.com/doi/full/10.1080/11263504.2020.1810810" target="_blank" rel="noopener" aria-label="Open publication 12">PDF ↗</a>
+    </p>
+  </article>
+  <!-- PUBLICATION 13 -->
+  <article class="fog-premium-card">
+    <p class="fog-premium-citation">
+      Patel, R. S., Vasava, A. M., &amp; Rajput, K. S. (2023).
+      <strong>Molecular and morphological study on some Gasteroid (Basidiomycota) fungi from Western India.</strong>
+      <em>Asian Journal of Mycology</em>, 6(2):72–88.
+      <a class="fog-premium-pdf" href="https://img1.wsimg.com/blobby/go/2951aae8-0bd3-4632-a1cf-5ebe56982356/downloads/e21a5b9e-272a-4b6c-b7ec-c0f3115aa284/Molecular%20and%20morphological%20studies%20gasteroid%20.pdf?ver=1792875218610" target="_blank" rel="noopener" aria-label="Open publication 13">PDF ↗</a>
+    </p>
+  </article>
+  <!-- PUBLICATION 14 -->
+  <article class="fog-premium-card">
+    <p class="fog-premium-citation">
+      Patel, R. S., &amp; Rajput, K. S. (2024).
+      <strong>An integrative taxonomic and molecular identification of <em>Calvatia holothurioides</em> (Lycoperdaceae): the present status of genus <em>Calvatia</em> in India.</strong>
+      <em>Plant Biosystems-An International Journal Dealing with all Aspects of Plant Biology</em>, 1–12.
+      <a class="fog-premium-pdf" href="https://www.tandfonline.com/doi/full/10.1080/11263504.2024.2421237" target="_blank" rel="noopener" aria-label="Open publication 14">PDF ↗</a>
+    </p>
+  </article>
+</div>
+
 </body>
 </html>
